@@ -8,7 +8,6 @@ classes:
 - system.salt.minion.ca.salt_master
 - system.salt.master.api
 - system.reclass.storage.salt
-- system.backupninja.client.single
 - system.xtrabackup.server.single
 - system.salt.minion.cert.k8s_server
 - system.reclass.storage.system.kubernetes_control_cluster

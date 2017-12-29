@@ -16,6 +16,7 @@ parameters:
 
     cluster_domain: example.com
     cluster_name: mitroko
+    openstack_proxy_address: 10.0.2.1
     cluster_public_host: ${_param:openstack_proxy_address}
 
     control_network_netmask: 255.255.255.0
