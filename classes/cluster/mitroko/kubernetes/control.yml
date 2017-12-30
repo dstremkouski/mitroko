@@ -11,7 +11,7 @@ classes:
 - cluster.mitroko.infra
 parameters:
   _param:
-    keepalived_vip_interface: ens4
+    keepalived_vip_interface: ens8
     keepalived_vip_virtual_router_id: 65
   etcd:
     server:

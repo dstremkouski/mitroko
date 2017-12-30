@@ -45,14 +45,14 @@ parameters:
           vm.max_map_count: 262144
     network:
       interface:
-        ens4:
+        ens8:
           mtu: 1450
           enabled: true
           proto: static
           type: eth
           address: ${_param:single_address}
           netmask: ${_param:control_network_netmask}
-        ens5:
+        ens9:
           mtu: 1450
           enabled: true
           proto: static
