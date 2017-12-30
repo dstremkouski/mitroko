@@ -11,7 +11,7 @@ classes:
 - system.xtrabackup.server.single
 - system.salt.minion.cert.k8s_server
 - system.reclass.storage.system.kubernetes_control_cluster
-- cluster.mitroko.infra.maas
+- cluster.mitroko.reclass.kubernetes_compute
 - cluster.mitroko.infra
 parameters:
   _param:
@@ -71,6 +71,9 @@ parameters:
         kubernetes_control_node03:
           params:
             tenant_address: ${_param:kubernetes_control_node03_tenant_address}
-          classes:
-          - system.backupninja.server.single
-
+        kubernetes_compute_node001:
+          params:
+            tenant_address: ${_param:kubernetes_compute_node001_tenant_address}
+        kubernetes_compute_node002:
+          params:
+            tenant_address: ${_param:kubernetes_compute_node002_tenant_address}

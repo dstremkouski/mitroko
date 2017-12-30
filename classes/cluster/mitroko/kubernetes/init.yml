@@ -22,9 +22,13 @@ parameters:
     kubernetes_control_node01_hostname: ctl01
     kubernetes_control_node02_hostname: ctl02
     kubernetes_control_node03_hostname: ctl03
+    kubernetes_compute_node001_hostname: cmp001
+    kubernetes_compute_node002_hostname: cmp002
     kubernetes_control_node01_address: 10.0.1.11
     kubernetes_control_node02_address: 10.0.1.12
     kubernetes_control_node03_address: 10.0.1.13
+    kubernetes_compute_node001_address: 10.0.1.16
+    kubernetes_compute_node002_address: 10.0.1.17
 
     cluster_vip_address: ${_param:kubernetes_control_address}
     cluster_local_address: ${_param:single_address}
@@ -47,6 +51,8 @@ parameters:
     kubernetes_control_node01_tenant_address: 172.16.11.11
     kubernetes_control_node02_tenant_address: 172.16.11.12
     kubernetes_control_node03_tenant_address: 172.16.11.13
+    kubernetes_compute_node001_tenant_address: 172.16.11.16
+    kubernetes_compute_node002_tenant_address: 172.16.11.17
 
   linux:
     network:

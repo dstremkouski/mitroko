@@ -1,0 +1,28 @@
+parameters:
+  _param:
+    kubernetes_compute_node001_hostname: cmp001
+    kubernetes_compute_node002_hostname: cmp002
+    kubernetes_compute_node001_deploy_address: ${_param:kubernetes_compute_node001_address}
+    kubernetes_compute_node002_deploy_address: ${_param:kubernetes_compute_node002_address}
+    kubernetes_control_system_codename: xenial
+  reclass:
+    storage:
+      node:
+        kubernetes_compute_node001:
+          name: ${_param:kubernetes_compute_node001_hostname}
+          domain: ${_param:cluster_domain}
+          classes:
+          - cluster.${_param:cluster_name}.kubernetes.compute
+          params:
+            salt_master_host: ${_param:reclass_config_master}
+            linux_system_codename: ${_param:kubernetes_control_system_codename}
+            single_address: ${_param:kubernetes_compute_node001_address}
+        kubernetes_compute_node002:
+          name: ${_param:kubernetes_compute_node002_hostname}
+          domain: ${_param:cluster_domain}
+          classes:
+          - cluster.${_param:cluster_name}.kubernetes.compute
+          params:
+            salt_master_host: ${_param:reclass_config_master}
+            linux_system_codename: ${_param:kubernetes_control_system_codename}
+            single_address: ${_param:kubernetes_compute_node002_address}
